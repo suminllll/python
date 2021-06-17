@@ -1,5 +1,88 @@
 문제 
 
+ ##### add_to_dict #####
+
+add_to_dict("hello", "kimchi"):
+You need to send a dictionary. You sent: <class 'str'>
+
+ add_to_dict(my_english_dict, "kimchi"):
+You need to send a word and a definition
+
+ add_to_dict(my_english_dict, "kimchi", "The source of life."):
+kimchi has been added.
+
+ add_to_dict(my_english_dict, "kimchi", "my fav. food"):
+kimchi is already on the dictionary. Won't add.
+
+
+
+###### add_to_dict ######
+
+add_to_dict("hello", "kimchi"):
+You need to send a dictionary. You sent: <class 'str'>
+
+add_to_dict(my_english_dict, "kimchi"):
+You need to send a word and a definition.
+
+add_to_dict(my_english_dict, "kimchi", "The source of life."):
+kimchi has been added.
+
+add_to_dict(my_english_dict, "kimchi", "My fav. food"):
+kimchi is already on the dictionary. Won't add.
+
+
+###### get_from_dict ######
+
+
+get_from_dict("hello", "kimchi"):
+You need to send a dictionary. You sent: <class 'str'>
+
+get_from_dict(my_english_dict):
+You need to send a word to search for.
+
+get_from_dict(my_english_dict, "galbi"):
+galbi was not found in this dict.
+
+get_from_dict(my_english_dict, "kimchi"):
+kimchi: The source of life.
+
+
+###### update_word ######
+
+
+update_word("hello", "kimchi"):
+You need to send a dictionary. You sent: <class 'str'>
+
+update_word(my_english_dict, "kimchi"):
+You need to send a word and a definition to update.
+
+update_word(my_english_dict, "galbi", "Love it."):
+galbi is not on the dict. Can't update non-existing word.
+
+update_word(my_english_dict, "kimchi", "Food from the gods."):
+kimchi has been updated to: Food from the gods.
+
+get_from_dict(my_english_dict, "kimchi"):
+kimchi: Food from the gods.
+
+
+###### delete_from_dict ######
+
+
+delete_from_dict("hello", "kimchi"):
+You need to send a dictionary. You sent: <class 'str'>
+
+delete_from_dict(my_english_dict):
+You need to specify a word to delete.
+
+delete_from_dict(my_english_dict, "galbi"):
+galbi is not in this dict. Won't delete.
+
+delete_from_dict(my_english_dict, "kimchi"):
+kimchi has been deleted.
+
+get_from_dict(my_english_dict, "kimchi"):
+kimchi was not found in this dict.
 
 
 답
