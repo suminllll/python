@@ -1,0 +1,16 @@
+import turtle as t
+
+n =  int(input())
+line = int(input())
+t.shape('turtle')
+t.speed('fastest')
+if 5 <= n <= 10 and 50 <= line <= 150:
+    for i in range(n):
+        t.forward(line)
+        t.right((360/n)*2)
+        t.forward(line)
+        t.left(360/n)
+else:
+    print("잘못입력")
+
+t.mainloop()
