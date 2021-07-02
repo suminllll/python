@@ -1,0 +1,11 @@
+사용자입력으로 입력된 문자열에서 'the'의 개수를 출력
+
+import string #텍스트 안에 문자열을 카운트(또는 검색)할때에 특수문자(,.등)가 들어있을 경우 제거하기 위해 사용
+p = input()
+words = p.split() #공백을 기준으로 문자열을 나눔
+count = 0 
+for i in range(len(words)): 
+    s = words[i].strip(string.punctuation) #구두점 제거
+    if s == 'the': 
+      count += 1
+print(count)      
