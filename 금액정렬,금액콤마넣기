@@ -1,0 +1,11 @@
+# 표준입력으로 물품가격 여러개가 문자열 한 줄로 입력
+# 각 가격은 세미콜론으로 구분
+# 입력된 가격을 높은 가격순으로 출력
+# 가격은 길이를 9로 만든뒤 오른쪽 정렬하고 
+# 천단위로 콤마넣기
+
+price = map(int, input().split(';'))
+a = list(price)
+a.sort(reverse = True)
+for i in a:
+    print('{0:>9,}'.format(i))
