@@ -1,0 +1,12 @@
+# 문자열로 사용자입력 첫번째줄은 키
+# 숫자로 두번째 줄은 값으로 딕셔너리로 생성
+#키가 'delta'인 키-값 쌍과,
+# 값이 30인 키-값 쌍을 삭제
+
+
+keys = input().split()
+values = map(int, input().split())
+x = dict(zip(keys, values)) 
+x.pop('delta')
+x = {key:value for key, value in x.items() if value != 30}
+print(x)
