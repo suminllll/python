@@ -1,0 +1,11 @@
+# 문자열이 한줄로 저장된 words.txt 파일
+# 문자 c가 포함된 단어를 각 줄에 출력
+# 등장한 순서대로 출력하며, 콤마와 점은 출력하지 않는다
+
+
+with open('words.txt', 'r') as file:
+    for line in file:
+        words = line.split()
+        for word in words:
+            if 'c' in word:    
+                print(word.strip(',.'))
