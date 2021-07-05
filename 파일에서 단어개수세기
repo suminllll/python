@@ -1,0 +1,10 @@
+#파일에서 10자 이하인 단어 개수 세기
+# 단어가 줄 단위로 저장된 'words.txt'파일
+
+with open('words.txt','r') as file:
+    count = 0
+words = file.readlines()    
+for word in words:
+        if len(word.strip('\n')) <= 10:        
+            count += 1
+print(count)
