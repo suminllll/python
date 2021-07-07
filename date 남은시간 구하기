@@ -7,3 +7,16 @@ print('오늘은 %d년 %d월 %d일입니다.' %(today.year,today.month, today.da
 xMax = datetime.datetime(2021, 12, 25)
 lastTime = xMax - datetime.datetime.now()
 print('다음 크리스마스 까지는 {}일 {}시간 남았습니다.'.format(lastTime.days, lastTime.seconds//3600))
+
+# 지금으로부터 100일 후, 전 구하기
+# timedelta 사용
+
+import datetime
+print('오늘: ',datetime.datetime.now())
+
+hundred = datetime.timedelta(days=100)
+plus100Day = datetime.datetime.now() + hundred
+print('100일 후:', plus100Day)
+
+minus100Day = datetime.datetime.now() - hundred
+print('100일 전:', minus100Day)
