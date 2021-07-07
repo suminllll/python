@@ -1,0 +1,9 @@
+#현재시간부터 크리스마스 까지 남은시간 구하기
+
+import datetime
+today = datetime.date.today()
+print('오늘은 %d년 %d월 %d일입니다.' %(today.year,today.month, today.day))
+
+xMax = datetime.datetime(2021, 12, 25)
+lastTime = xMax - datetime.datetime.now()
+print('다음 크리스마스 까지는 {}일 {}시간 남았습니다.'.format(lastTime.days, lastTime.seconds//3600))
