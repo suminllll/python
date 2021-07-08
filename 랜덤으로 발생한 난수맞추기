@@ -1,0 +1,35 @@
+# 랜덤으로 발생한 난수를 맞추는 게임을 하려고한ㄷ
+# 규칙 
+# 1단계: 1과2중에 하나의 숫자를 맞춘다
+# 2단계: 1~4 중에 하나의 숫자를 맞춘다
+# 3단계: 1~8중에 하나의 숫자를 맞춘다
+# 3단계를 성공하면 'lucky' 출력,
+# 도중 실패하면 'Failure' 출력
+# 출력
+level1 (1~2): 2
+Correct!
+level1 (1~4): 3
+Correct!
+level1 (1~8): 5
+Lucky!
+
+
+import random
+
+num1 = 1
+num2 = 2
+level = 0
+
+while level < 3 :
+    level += 1
+    rand = random.randint(num1, num2 + 1)
+    user = int(input('level{} ({}~{})'.format(level, num1, num2)))
+    if user == rand:
+        print('Correct!')
+        num2 = num2 * 2
+    else:
+        print('Failure')
+        print('다시시도', user)
+        break
+if num2 > 8:
+    print('Lucky!')      
