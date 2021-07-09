@@ -1,0 +1,17 @@
+# 정수로 사용자입력
+# 함수 c를 호출할 때마다 숫자가 1씩 줄어들게 만들기
+# 함수를 클로저로 만들기
+
+def countdown(n):
+    i = n + 1
+    def count():
+        nonlocal i
+        i -= 1
+        return i
+    return count    
+
+n = int(input())
+
+c = countdown(n)
+for i in range(n):
+    print(c(), end =' ')
