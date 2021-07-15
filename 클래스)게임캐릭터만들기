@@ -1,0 +1,20 @@
+# 사용자입력 으로(체력, 마나, AP) 입력
+# Annie class를 작성하여 tibbers skill의 피해량이 출력
+# 티버의 피해량은 AP * 0.65 + 400 이며
+# AP(Ability Power, 주문력)은 마법 능력치를 뜻한다
+
+
+입력 -> 511.68 334.0 298
+출력 -> 티버: 피해량 593.7
+
+class Annie:
+    def __init__(self, health, mana, ability_power):
+        self.health = health
+        self.mana = mana
+        self.ability_power = ability_power
+    def tibbers(self):
+        self.ap = self.ability_power * 0.65 + 400
+        print('티버: 피해량 ', self.ap)
+health, mana, ability_power = map(float, input().split())
+x = Annie(health=health, mana=mana, ability_power=ability_power)
+x.tibbers()            
