@@ -1,0 +1,16 @@
+사용자입력 숫자.확장자 형식을 
+파일이름이 숫자 3개이면서 앞에 0이 들어가는 형식으로 출력
+람다식을 사용해야하며 리스트형태로 출력
+람다식에서 파일명을 처리할 때는 문자열 포매팅과 문자열 메서드를 활용
+
+files = input().split()
+
+# format 사용
+a = list(map(lambda x: '{0:03d}'.format(int(x.split('.')[0])) + 
+'.' + x.split('.')[1], files))
+
+# .zfill사용
+a = list(map(lambda x : x.split('.')[0].zfill(3) + 
+'.' + x.split('.')[1], files))
+
+print(a)
